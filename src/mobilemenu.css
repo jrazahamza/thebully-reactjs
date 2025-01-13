@@ -1,0 +1,122 @@
+
+@media screen and (max-width: 768px) {
+
+    .mobile-header .logo-mobile {
+        margin-left: 34px;
+    }   
+    .mega-menu .header-categories .header-categories-dropdown{
+        width: 300px;
+        background-color: #fff;
+      margin-top:45px;
+      padding:20px 30px;
+      margin-left: -31px;
+    }
+    .category-item .sub-menu {
+        position: absolute;
+        left: 0;
+    }
+    .mega-menu .category-item-button {
+        display: flex;
+        justify-content: space-between;
+    }  
+    .mega-menu .category-item {
+        margin: 8px 0px;
+    }  
+    .mega-menu {
+      position: relative;
+      top: 5px;
+    }
+    
+    .header-categories {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+.header-categories .sub-sub-menu {
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+    height: auto;
+    z-index: 99;
+}  
+.mega-menu .category-item .sub-menu {
+        position: absolute;
+        left: -11px;
+        top: 71px;
+        width: 300px;
+}  
+
+.mega-menu .back-button .fa{
+    font-size: 14px;
+}
+.mega-menu .back-button {
+    margin-left: 28px;
+}
+.mega-menu .otherpages ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.mega-menu .otherpages ul li {
+    margin: 8px 0px;
+}
+.mega-menu .otherpages ul li a{
+    text-decoration: none;
+    color: #212529;
+}      
+.mega-menu .sign-in-up {
+    margin-bottom: 28px;
+}     
+.mega-menu .sign-in-up .btn-sign-in {
+    background-color: #003459;
+    color:#fff;   
+    margin-right:5px;
+    padding:5px 30px;
+}
+.mega-menu .sign-in-up .btn-sign-up {
+    background-color: #8B1339;
+    color:#fff;
+    margin-left:5px;
+    padding:5px 30px;
+}
+
+.sub-category-item li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mega-menu .sub-category-item li span{
+    color:#3C3C3C;
+}
+.mega-menu .sub-menu .sub-category-item-button li a{
+    color:#3C3C3C;
+    text-decoration:none !important;   
+}
+
+.mega-menu .mobile-sub-sub-menu li a {
+    text-decoration: none;
+    color: #3C3C3C;
+}
+
+.mega-menu .mobile-sub-menu>li {
+    margin:8px 0px;
+}
+.mega-menu .mobile-sub-menu a {
+    text-decoration: none;
+    color: #3C3C3C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

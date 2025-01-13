@@ -1,0 +1,187 @@
+{
+    "main_categories": [
+      {
+        "name": "Bully",
+        "sub_categories": [
+          {
+            "name": "Bullies",
+            "sub_sub_categories": [
+              "American Bulldog",
+              "American Bully",
+              "American Bully Classic",
+              "American Bully Extreme",
+              "American Bully Pocket",
+              "American Bully Standard",
+              "American Bully XL",
+              "American Pit Bull Terrier",
+              "American Staffordshire Terrier",
+              "Boston Terrier",
+              "Boxer",
+              "Bull Mastiff",
+              "Bull Terrier",
+              "Cane Corso",
+              "Doberman",
+              "Dogo Argentino",
+              "Dogue De Bordeaux",
+              "English Bulldog",
+              "French Bulldog",
+              "Neapolitan Mastiff",
+              "Olde English Bulldogge",
+              "Presa Canario",
+              "Rottweiler",
+              "Shorty Bull",
+              "Staffordshire Bull Terrier",
+              "Tibetan Mastiff"
+            ]
+          },
+          {
+            "name": "Pups",
+            "sub_sub_categories": [
+              "American Bulldog",
+              "American Bully",
+              "American Bully Classic",
+              "American Bully Extreme",
+              "American Bully Pocket",
+              "American Bully Standard",
+              "American Bully XL",
+              "American Pit Bull Terrier",
+              "American Staffordshire Terrier",
+              "Boston Terrier",
+              "Boxer",
+              "Bull Mastiff",
+              "Bull Terrier",
+              "Cane Corso",
+              "Doberman",
+              "Dogo Argentino",
+              "Dogue De Bordeaux",
+              "English Bulldog",
+              "French Bulldog",
+              "Neapolitan Mastiff",
+              "Olde English Bulldogge",
+              "Presa Canario",
+              "Rottweiler",
+              "Shorty Bull",
+              "Staffordshire Bull Terrier",
+              "Tibetan Mastiff"
+            ]
+          },
+          {
+            "name": "Studs",
+            "sub_sub_categories": [
+              "American Bulldog",
+              "American Bully",
+              "American Bully Classic",
+              "American Bully Extreme",
+              "American Bully Pocket",
+              "American Bully Standard",
+              "American Bully XL",
+              "American Pit Bull Terrier",
+              "American Staffordshire Terrier",
+              "Boston Terrier",
+              "Boxer",
+              "Bull Mastiff",
+              "Bull Terrier",
+              "Cane Corso",
+              "Doberman",
+              "Dogo Argentino",
+              "Dogue De Bordeaux",
+              "English Bulldog",
+              "French Bulldog",
+              "Neapolitan Mastiff",
+              "Olde English Bulldogge",
+              "Presa Canario",
+              "Rottweiler",
+              "Shorty Bull",
+              "Staffordshire Bull Terrier",
+              "Tibetan Mastiff"
+            ]
+          },
+          {
+            "name": "Breeders",
+            "sub_sub_categories": [
+              "American Bulldog",
+              "American Bully",
+              "American Bully Classic",
+              "American Bully Extreme",
+              "American Bully Pocket",
+              "American Bully Standard",
+              "American Bully XL",
+              "American Pit Bull Terrier",
+              "American Staffordshire Terrier",
+              "Boston Terrier",
+              "Boxer",
+              "Bull Mastiff",
+              "Bull Terrier",
+              "Cane Corso",
+              "Doberman",
+              "Dogo Argentino",
+              "Dogue De Bordeaux",
+              "English Bulldog",
+              "French Bulldog",
+              "Neapolitan Mastiff",
+              "Olde English Bulldogge",
+              "Presa Canario",
+              "Rottweiler",
+              "Shorty Bull",
+              "Staffordshire Bull Terrier",
+              "Tibetan Mastiff"
+            ]
+          },
+          {
+            "name": "Breedings",
+            "sub_sub_categories": [
+              "American Bulldog",
+              "American Bully",
+              "American Bully Classic",
+              "American Bully Extreme",
+              "American Bully Pocket",
+              "American Bully Standard",
+              "American Bully XL",
+              "American Pit Bull Terrier",
+              "American Staffordshire Terrier",
+              "Boston Terrier",
+              "Boxer",
+              "Bull Mastiff",
+              "Bull Terrier",
+              "Cane Corso",
+              "Doberman",
+              "Dogo Argentino",
+              "Dogue De Bordeaux",
+              "English Bulldog",
+              "French Bulldog",
+              "Neapolitan Mastiff",
+              "Olde English Bulldogge",
+              "Presa Canario",
+              "Rottweiler",
+              "Shorty Bull",
+              "Staffordshire Bull Terrier",
+              "Tibetan Mastiff"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Supplies",
+        "sub_categories": [
+          { "name": "Beds" },
+          { "name": "Bowls & Feeders" },
+          { "name": "Bully Clothing & Accessories" },
+          { "name": "Carriers & Travel" },
+          { "name": "Collars, Leashes, Harnesses & Vest" },
+          { "name": "Crates, Pens & Gates" },
+          { "name": "Technology & Miscellaneous" },
+          { "name": "Toys" },
+          { "name": "Training & Behavior" }
+        ]
+      },
+      {
+        "name": "Food & Supplements",
+        "sub_categories": []
+      },
+      {
+        "name": "Care & Services",
+        "sub_categories": []
+      }
+    ]
+  }
+  
