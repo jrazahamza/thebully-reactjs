@@ -26,7 +26,6 @@ function HomePage() {
     <ShopBanner />
    {/* <!-- Dog Listings Section 1--> */}
     <HomeFeatured />
-  
    {/* <!-- want top spot section --> */}
     <TopSpot />
    {/* <!-- Dog Listings Section 1--> */}

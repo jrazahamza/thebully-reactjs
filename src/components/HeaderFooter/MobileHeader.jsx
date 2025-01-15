@@ -1,6 +1,7 @@
 import React from 'react'
 import MegaMenu from './MegaMenu'
 import '../../mobilemenu.css'
+import SearchInput from './SearchInput'
 function MobileHeader() {
   return (
     <>
@@ -21,7 +22,8 @@ function MobileHeader() {
                     </div>
                     <div className="top-mo-right">
                         <div className="search-icon">
-                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <SearchInput />
+                            {/* <i class="fa fa-search" aria-hidden="true"></i> */}
                         </div>
                         <div className="bell-icon">
                             <i class="fa fa-bell" aria-hidden="true"></i>

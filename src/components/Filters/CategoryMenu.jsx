@@ -33,7 +33,7 @@ const CategoryMenu = ({ categories }) => {
             {/* Subcategories (Toggle visibility) */}
             {openCategory === category && (
               <div className="filter-content filter-group-content subsub-cta124 left-sidebar-child-group" style={{ marginLeft: "20px", marginTop: "10px" }}>
-                {category.subCategories.map((subCategory) => (
+                {category.sub_categories.map((subCategory) => (
                   <div key={subCategory.name} className="subcategory-item">
                     {/* Subcategory */}
                     <div class="filter-title parent-cta left-sidebar-cta-label" onClick={() => toggleSubCategory(subCategory)}
@@ -53,7 +53,7 @@ const CategoryMenu = ({ categories }) => {
                           borderLeft: "1px dashed gray",
                           paddingLeft: "10px",
                         }} >
-                        {subCategory.subSubCategories.map((subSubCategory) => (
+                        {subCategory.sub_sub_categories.map((subSubCategory) => (
                         //   <div key={subSubCategory.name} className="subsubcategory-item">
                         //     {subSubCategory.name}
                         //   </div>

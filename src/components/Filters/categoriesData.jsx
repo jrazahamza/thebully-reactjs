@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import CategoryMenu from "./CategoryMenu";
+import axios from 'axios';
 
 const categoriesData = [
   {
@@ -146,10 +147,32 @@ const categoriesData = [
   },
 ];
 
+
 const App = () => {
+
+    // State to hold categories data
+    const [categories, setCategories] = useState([]);
+    const [loading, setLoading] = useState(true);
+    console.log("froma api",categories);
+    console.log("static data", categoriesData);
+    // Fetch categories data when component mounts
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/api/categories')  // Laravel API endpoint for fetching categories
+            .then((response) => {
+                setCategories(response.data.main_categories);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error("There was an error fetching the categories:", error);
+                setLoading(false);
+            });
+    }, []);
+
+
   return (
     <div className="app">
-      <CategoryMenu categories={categoriesData} />
+            <CategoryMenu categories={categories} />
+      {/* <CategoryMenu categories={categoriesData} /> */}
     </div>
   );
 };

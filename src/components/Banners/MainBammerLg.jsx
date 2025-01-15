@@ -1,5 +1,5 @@
 import React from 'react'
-
+const imageBannerPath = '/images/mobile-banner.png';
 function MainBammerLg() {
   return (
     <>
@@ -16,6 +16,7 @@ function MainBammerLg() {
                 </div>
             </div>
         </div>
+        {/* <div className="mobile-banner"><img src={imageBannerPath} alt="" /></div> */}
     </section>      
     </>
   )

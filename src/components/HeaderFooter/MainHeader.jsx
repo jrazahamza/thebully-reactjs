@@ -26,7 +26,7 @@ function MainHeader() {
 
   return (
     <>
-    <div>
+    <div className='header-section'>
       {isMobile ? (
         // <MobileHeader /> // Component for mobile header
         <SmallHeader />
@@ -41,11 +41,11 @@ function MainHeader() {
   )
 }
 
-const SmallHeader = () => <header className='mobile-header'>
+const SmallHeader = () => <div className='mobile-header-content'>
     <MobileHeader />
-    </header>;
-const LargeHeader = () => <header className='desktop-header'>
+    </div>;
+const LargeHeader = () => <div className='desktop-header'>
     <Header />
-</header>;
+</div>;
 
 export default MainHeader

@@ -1,39 +1,40 @@
 
 @media screen and (max-width: 768px) {
 
-    .mobile-header .logo-mobile {
-        margin-left: 34px;
-    }   
-    .mega-menu .header-categories .header-categories-dropdown{
-        width: 300px;
-        background-color: #fff;
-      margin-top:45px;
-      padding:20px 30px;
-      margin-left: -31px;
-    }
-    .category-item .sub-menu {
-        position: absolute;
-        left: 0;
-    }
-    .mega-menu .category-item-button {
-        display: flex;
-        justify-content: space-between;
-    }  
-    .mega-menu .category-item {
-        margin: 8px 0px;
-    }  
-    .mega-menu {
-      position: relative;
-      top: 5px;
-    }
-    
-    .header-categories {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+.mobile-header .logo-mobile {
+    margin-left: 34px;
+}   
+.mega-menu .header-categories .header-categories-dropdown{
+    width: 300px;
+    background-color: #fff;
+    margin-top:45px;
+    padding:20px 30px;
+    margin-left: -31px;
+}
+.category-item .sub-menu {
+    position: absolute;
+    left: 0;
+}
+.mega-menu .category-item-button {
+    display: flex;
+    justify-content: space-between;
+}  
+.mega-menu .category-item {
+    margin: 8px 0px;
+}  
+.mega-menu {
+    position: relative;
+    top: 5px;
+}
+
+.header-categories {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 .header-categories .sub-sub-menu {
     background-color: #fff;
+    width: 300px;
     position: absolute;
     left: 0px;
     height: auto;
@@ -106,14 +107,10 @@
     color: #3C3C3C;
 }
 
-
-
-
-
-
-
-
-
+.top-header .top-mo-right .bell-icon {
+    position: relative;
+    margin-top: 13px;
+}
 
 
 

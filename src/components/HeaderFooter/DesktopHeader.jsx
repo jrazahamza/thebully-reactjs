@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import LoginModal from "../Modal/LoginModal";
 import SearchContainer from "../Search/SearchContainer";
+import TopCtaMenu from "./TopCtaMenu";
+import DesktopMegaMenu from "./DesktopMegaMenu";
 function Header() {
 
     const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -131,8 +133,6 @@ function Header() {
 
                         {/* <!-- All Categories Dropdown --> */}
                         <div class="all-categories-menu">
-                            {/* <a class="navbar-brand all-categories header-all-categories" href="#"> All Categories
-                                &nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a> */}
                                 <a href="#"
                                     className="navbar-brand all-categories header-all-categories"
                                     ref={allCategoriesLinkRef}
@@ -150,146 +150,56 @@ function Header() {
                                                 consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                                         </a>
                                         <ul class="sub-menu">
-                                            {/* <li class="back-btn sub-back-link">
-                                                <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                            </li> */}
                                             <li class="sub-category-item sub-has-children bullies">
-                                                <a
-                                                    href="https://thebullysupply.com/category/?search_sub_category=Bullies">Bullies</a>
-                                                <span class="mobile-sub-sub"><span class="mo-sub-sub-text">
-                                                        Bullies</span><i class="fa fa-chevron-right"
-                                                        aria-hidden="true"></i></span>
+                                                <a href="#">Bullies</a>
+                                                <span class="mobile-sub-sub"><span class="mo-sub-sub-text">Bullies</span>
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                </span>
                                                 <ul class="sub-sub-menu">
-                                                    {/* <li class="back-btn back-link">
-                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                                    </li> */}
                                                     <li class="sub-sub-li american-bulldog">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bulldog60">American
-                                                            Bulldog</a>
+                                                        <a href="#">American Bulldog</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully61">American
-                                                            Bully</a>
+                                                        <a href="#">American Bully</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully-classic">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Classic62">American
-                                                            Bully Classic</a>
+                                                        <a href="#">American Bully Classic</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully-extreme">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Extreme63">American
-                                                            Bully Extreme</a>
+                                                        <a href="#">American Bully Extreme</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully-pocket">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Pocket64">American
-                                                            Bully Pocket</a>
+                                                        <a href="#">American Bully Pocket</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully-standard">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Standard65">American
-                                                            Bully Standard</a>
+                                                        <a href="#">American Bully Standard</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully-xl">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+XL66">American
-                                                            Bully XL</a>
+                                                        <a href="#">American Bully XL</a>
                                                     </li>
                                                     <li class="sub-sub-li american-pit-bull-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Pit+Bull+Terrier67">American
-                                                            Pit Bull Terrier</a>
+                                                        <a href="#">American Pit Bull Terrier</a>
                                                     </li>
                                                     <li class="sub-sub-li american-staffordshire-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Staffordshire+Terrier68">American
-                                                            Staffordshire Terrier</a>
+                                                        <a href="#">American Staffordshire Terrier</a>
                                                     </li>
                                                     <li class="sub-sub-li boston-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Boston+Terrier69">Boston
-                                                            Terrier</a>
+                                                        <a href="#">Boston Terrier</a>
                                                     </li>
                                                     <li class="sub-sub-li boxer">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Boxer70">Boxer</a>
+                                                        <a href="#">Boxer</a>
                                                     </li>
                                                     <li class="sub-sub-li bull-mastiff">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Bull+Mastiff71">Bull
-                                                            Mastiff</a>
+                                                        <a href="#">Bull Mastiff</a>
                                                     </li>
                                                     <li class="sub-sub-li bull-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Bull+Terrier72">Bull
-                                                            Terrier</a>
+                                                        <a href="#">Bull Terrier</a>
                                                     </li>
                                                     <li class="sub-sub-li cane-corso">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Cane+Corso73">Cane
-                                                            Corso</a>
+                                                        <a href="#">Cane Corso</a>
                                                     </li>
                                                     <li class="sub-sub-li doberman">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Doberman+74">Doberman
-                                                        </a>
-                                                    </li>
-                                                    <li class="sub-sub-li dogo-argentino">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Dogo+Argentino75">Dogo
-                                                            Argentino</a>
-                                                    </li>
-                                                    <li class="sub-sub-li dogue-de-bordeaux">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Dogue+De+Bordeaux76">Dogue
-                                                            De Bordeaux</a>
-                                                    </li>
-                                                    <li class="sub-sub-li english-bulldog">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=English+Bulldog77">English
-                                                            Bulldog</a>
-                                                    </li>
-                                                    <li class="sub-sub-li french-bulldog">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=French+Bulldog78">French
-                                                            Bulldog</a>
-                                                    </li>
-                                                    <li class="sub-sub-li neapolitan-mastiff">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Neapolitan+Mastiff79">Neapolitan
-                                                            Mastiff</a>
-                                                    </li>
-                                                    <li class="sub-sub-li olde-english-bulldogge">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Olde+English+Bulldogge80">Olde
-                                                            English Bulldogge</a>
-                                                    </li>
-                                                    <li class="sub-sub-li presa-canario">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Presa+Canario81">Presa
-                                                            Canario</a>
-                                                    </li>
-                                                    <li class="sub-sub-li rottweiler">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Rottweiler82">Rottweiler</a>
-                                                    </li>
-                                                    <li class="sub-sub-li shorty-bull">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Shorty+Bull83">Shorty
-                                                            Bull</a>
-                                                    </li>
-                                                    <li class="sub-sub-li staffordshire-bull-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Staffordshire+Bull+Terrier84">Staffordshire
-                                                            Bull Terrier</a>
-                                                    </li>
-                                                    <li class="sub-sub-li tibetan-mastiff">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Tibetan+Mastiff85">Tibetan
-                                                            Mastiff</a>
+                                                        <a href="">Doberman </a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -305,273 +215,46 @@ function Header() {
                                                         <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
                                                     </li> */}
                                                     <li class="sub-sub-li american-bulldog">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bulldog87">American
-                                                            Bulldog</a>
+                                                        <a href="#">American Bulldog</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully88">American
-                                                            Bully</a>
+                                                        <a href="#">American Bully</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully-classic">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Classic89">American
-                                                            Bully Classic</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-bully-extreme">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Extreme90">American
-                                                            Bully Extreme</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-bully-pocket">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Pocket91">American
-                                                            Bully Pocket</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-bully-standard">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Standard92">American
-                                                            Bully Standard</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-bully-xl">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+XL93">American
-                                                            Bully XL</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-pit-bull-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Pit+Bull+Terrier94">American
-                                                            Pit Bull Terrier</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-staffordshire-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Staffordshire+Terrier95">American
-                                                            Staffordshire Terrier</a>
-                                                    </li>
-                                                    <li class="sub-sub-li boston-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Boston+Terrier96">Boston
-                                                            Terrier</a>
-                                                    </li>
-                                                    <li class="sub-sub-li boxer">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Boxer97">Boxer</a>
-                                                    </li>
-                                                    <li class="sub-sub-li bull-mastiff">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Bull+Mastiff98">Bull
-                                                            Mastiff</a>
-                                                    </li>
-                                                    <li class="sub-sub-li bull-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Bull+Terrier99">Bull
-                                                            Terrier</a>
-                                                    </li>
-                                                    <li class="sub-sub-li cane-corso">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Cane+Corso100">Cane
-                                                            Corso</a>
-                                                    </li>
-                                                    <li class="sub-sub-li doberman">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Doberman+101">Doberman
-                                                        </a>
-                                                    </li>
-                                                    <li class="sub-sub-li dogo-argentino">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Dogo+Argentino102">Dogo
-                                                            Argentino</a>
-                                                    </li>
-                                                    <li class="sub-sub-li dogue-de-bordeaux">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Dogue+De+Bordeaux103">Dogue
-                                                            De Bordeaux</a>
-                                                    </li>
-                                                    <li class="sub-sub-li english-bulldog">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=English+Bulldog104">English
-                                                            Bulldog</a>
-                                                    </li>
-                                                    <li class="sub-sub-li french-bulldog">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=French+Bulldog105">French
-                                                            Bulldog</a>
-                                                    </li>
-                                                    <li class="sub-sub-li neapolitan-mastiff">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Neapolitan+Mastiff106">Neapolitan
-                                                            Mastiff</a>
-                                                    </li>
-                                                    <li class="sub-sub-li olde-english-bulldogge">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Olde+English+Bulldogge107">Olde
-                                                            English Bulldogge</a>
-                                                    </li>
-                                                    <li class="sub-sub-li presa-canario">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Presa+Canario108">Presa
-                                                            Canario</a>
-                                                    </li>
-                                                    <li class="sub-sub-li rottweiler">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Rottweiler109">Rottweiler</a>
-                                                    </li>
-                                                    <li class="sub-sub-li shorty-bull">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Shorty+Bull110">Shorty
-                                                            Bull</a>
-                                                    </li>
-                                                    <li class="sub-sub-li staffordshire-bull-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Staffordshire+Bull+Terrier111">Staffordshire
-                                                            Bull Terrier</a>
+                                                        <a href="#">American Bully Classic</a>
                                                     </li>
                                                     <li class="sub-sub-li tibetan-mastiff">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Tibetan+Mastiff112">Tibetan
-                                                            Mastiff</a>
+                                                        <a href="#">Tibetan Mastiff</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li class="sub-category-item sub-has-children studs">
-                                                <a
-                                                    href="https://thebullysupply.com/category/?search_sub_category=Studs">Studs</a>
-                                                <span class="mobile-sub-sub"><span class="mo-sub-sub-text">
-                                                        Studs</span><i class="fa fa-chevron-right"
-                                                        aria-hidden="true"></i></span>
+                                                <a href="#">Studs</a>
+                                                <span class="mobile-sub-sub"><span class="mo-sub-sub-text"> Studs</span>
+                                                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                </span>
                                                 <ul class="sub-sub-menu">
                                                     {/* <!-- Back button for mobile screens --> */}
                                                     {/* <li class="back-btn back-link">
                                                         <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
                                                     </li> */}
                                                     <li class="sub-sub-li american-bulldog">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bulldog113">American
-                                                            Bulldog</a>
+                                                        <a href="#">American Bulldog</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully114">American
-                                                            Bully</a>
+                                                        <a href="#">American Bully</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully-classic">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Classic115">American
-                                                            Bully Classic</a>
+                                                        <a href="#">American Bully Classic</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully-extreme">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Extreme116">American
-                                                            Bully Extreme</a>
+                                                        <a href="#">American Bully Extreme</a>
                                                     </li>
                                                     <li class="sub-sub-li american-bully-pocket">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Pocket117">American
-                                                            Bully Pocket</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-bully-standard">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+Standard118">American
-                                                            Bully Standard</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-bully-xl">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Bully+XL119">American
-                                                            Bully XL</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-pit-bull-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Pit+Bull+Terrier120">American
-                                                            Pit Bull Terrier</a>
-                                                    </li>
-                                                    <li class="sub-sub-li american-staffordshire-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=American+Staffordshire+Terrier121">American
-                                                            Staffordshire Terrier</a>
-                                                    </li>
-                                                    <li class="sub-sub-li boston-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Boston+Terrier122">Boston
-                                                            Terrier</a>
-                                                    </li>
-                                                    <li class="sub-sub-li boxer">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Boxer123">Boxer</a>
-                                                    </li>
-                                                    <li class="sub-sub-li bull-mastiff">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Bull+Mastiff124">Bull
-                                                            Mastiff</a>
-                                                    </li>
-                                                    <li class="sub-sub-li bull-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Bull+Terrier125">Bull
-                                                            Terrier</a>
-                                                    </li>
-                                                    <li class="sub-sub-li cane-corso">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Cane+Corso126">Cane
-                                                            Corso</a>
-                                                    </li>
-                                                    <li class="sub-sub-li doberman">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Doberman+127">Doberman
-                                                        </a>
-                                                    </li>
-                                                    <li class="sub-sub-li dogo-argentino">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Dogo+Argentino128">Dogo
-                                                            Argentino</a>
-                                                    </li>
-                                                    <li class="sub-sub-li dogue-de-bordeaux">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Dogue+De+Bordeaux129">Dogue
-                                                            De Bordeaux</a>
-                                                    </li>
-                                                    <li class="sub-sub-li english-bulldog">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=English+Bulldog130">English
-                                                            Bulldog</a>
-                                                    </li>
-                                                    <li class="sub-sub-li french-bulldog">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=French+Bulldog131">French
-                                                            Bulldog</a>
-                                                    </li>
-                                                    <li class="sub-sub-li neapolitan-mastiff">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Neapolitan+Mastiff132">Neapolitan
-                                                            Mastiff</a>
-                                                    </li>
-                                                    <li class="sub-sub-li olde-english-bulldogge">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Olde+English+Bulldogge133">Olde
-                                                            English Bulldogge</a>
-                                                    </li>
-                                                    <li class="sub-sub-li presa-canario">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Presa+Canario134">Presa
-                                                            Canario</a>
-                                                    </li>
-                                                    <li class="sub-sub-li rottweiler">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Rottweiler135">Rottweiler</a>
-                                                    </li>
-                                                    <li class="sub-sub-li shorty-bull">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Shorty+Bull136">Shorty
-                                                            Bull</a>
-                                                    </li>
-                                                    <li class="sub-sub-li staffordshire-bull-terrier">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Staffordshire+Bull+Terrier137">Staffordshire
-                                                            Bull Terrier</a>
-                                                    </li>
+                                                        <a href="#">American Bully Pocket</a>
+                                                    </li>                                                   
                                                     <li class="sub-sub-li tibetan-mastiff">
-                                                        <a
-                                                            href="https://thebullysupply.com/category/?search_sub_sub_category=Tibetan+Mastiff138">Tibetan
-                                                            Mastiff</a>
+                                                        <a href="#">Tibetan Mastiff</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -865,9 +548,6 @@ function Header() {
                                                 consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                                         </a>
                                         <ul class="sub-menu">
-                                            {/* <li class="back-btn sub-back-link">
-                                                <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                            </li> */}
                                             <li class="sub-category-item sub-has-children beds">
                                                 <a
                                                     href="https://thebullysupply.com/category/?search_sub_category=Beds">Beds</a>
@@ -875,10 +555,6 @@ function Header() {
                                                         Beds</span><i class="fa fa-chevron-right"
                                                         aria-hidden="true"></i></span>
                                                 <ul class="sub-sub-menu">
-                                                    {/* <!-- Back button for mobile screens --> */}
-                                                    {/* <li class="back-btn back-link">
-                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                                    </li> */}
                                                     <li class="sub-sub-li beds">
                                                         <a
                                                             href="https://thebullysupply.com/category/?search_sub_sub_category=Beds191">Beds</a>
@@ -902,10 +578,6 @@ function Header() {
                                                         Feeders</span><i class="fa fa-chevron-right"
                                                         aria-hidden="true"></i></span>
                                                 <ul class="sub-sub-menu">
-                                                    {/* <!-- Back button for mobile screens --> */}
-                                                    {/* <li class="back-btn back-link">
-                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                                    </li> */}
                                                     <li class="sub-sub-li bowls-dishes">
                                                         <a
                                                             href="https://thebullysupply.com/category/?search_sub_sub_category=Bowls+%26+Dishes194">Bowls
@@ -959,10 +631,6 @@ function Header() {
                                                         Clothing &amp; Accessories</span><i class="fa fa-chevron-right"
                                                         aria-hidden="true"></i></span>
                                                 <ul class="sub-sub-menu">
-                                                    {/* <!-- Back button for mobile screens --> */}
-                                                    {/* <li class="back-btn back-link">
-                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                                    </li> */}
                                                     <li class="sub-sub-li shirts">
                                                         <a
                                                             href="https://thebullysupply.com/category/?search_sub_sub_category=Shirts203">Shirts</a>
@@ -1244,9 +912,6 @@ function Header() {
                                             </p>
                                         </a>
                                         <ul class="sub-menu">
-                                            {/* <li class="back-btn sub-back-link">
-                                                <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                            </li> */}
                                             <li class="sub-category-item sub-has-children anxiety-calming">
                                                 <a
                                                     href="https://thebullysupply.com/category/?search_sub_category=Anxiety+%26+Calming">Anxiety
@@ -1328,9 +993,6 @@ function Header() {
                                                 amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                                         </a>
                                         <ul class="sub-menu">
-                                            {/* <li class="back-btn sub-back-link">
-                                                <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                            </li> */}
                                             <li class="sub-category-item sub-has-children care">
                                                 <a
                                                     href="https://thebullysupply.com/category/?search_sub_category=Care">Care</a>
@@ -1338,10 +1000,6 @@ function Header() {
                                                         Care</span><i class="fa fa-chevron-right"
                                                         aria-hidden="true"></i></span>
                                                 <ul class="sub-sub-menu">
-                                                    {/* <!-- Back button for mobile screens --> */}
-                                                    {/* <li class="back-btn back-link">
-                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                                    </li> */}
                                                     <li class="sub-sub-li calming-care-anxiety">
                                                         <a
                                                             href="https://thebullysupply.com/category/?search_sub_sub_category=Calming+Care+%26+Anxiety244">Calming
@@ -1412,10 +1070,6 @@ function Header() {
                                                         Services</span><i class="fa fa-chevron-right"
                                                         aria-hidden="true"></i></span>
                                                 <ul class="sub-sub-menu">
-                                                    {/* <!-- Back button for mobile screens --> */}
-                                                    {/* <li class="back-btn back-link">
-                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                                    </li> */}
                                                     <li class="sub-sub-li al-reproduction">
                                                         <a
                                                             href="https://thebullysupply.com/category/?search_sub_sub_category=Al+Reproduction256">Al
@@ -1483,10 +1137,6 @@ function Header() {
                                                         Services</span><i class="fa fa-chevron-right"
                                                         aria-hidden="true"></i></span>
                                                 <ul class="sub-sub-menu">
-                                                    {/* <!-- Back button for mobile screens --> */}
-                                                    {/* <li class="back-btn back-link">
-                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                                    </li> */}
                                                     <li class="sub-sub-li accessories">
                                                         <a
                                                             href="https://thebullysupply.com/category/?search_sub_sub_category=Accessories268">Accessories</a>
@@ -1531,10 +1181,6 @@ function Header() {
                                                         Shippers &amp; Transportation Services</span><i
                                                         class="fa fa-chevron-right" aria-hidden="true"></i></span>
                                                 <ul class="sub-sub-menu">
-                                                    {/* <!-- Back button for mobile screens --> */}
-                                                    {/* <li class="back-btn back-link">
-                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-                                                    </li> */}
                                                     <li class="sub-sub-li pet-nannies">
                                                         <a
                                                             href="https://thebullysupply.com/category/?search_sub_sub_category=Pet+Nannies276">Pet
@@ -1556,38 +1202,10 @@ function Header() {
                             <div class="d-flex w-100 thebully-main-nav">
 
                                 <div class="remo-boot-class top-right-nav">
-                                    <nav class="navbar navbar-expand-lg navbar-light">
-                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 cta-nav ruk-custom-top-nav">
-                                            <li class="mobile-nav-icon"><i class="fa fa-bars" aria-hidden="true"></i>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                    href="https://thebullysupply.com/category/?search_sub_category=Bullies">Bullies</a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                    href="https://thebullysupply.com/category/?search_sub_category=Pups">Pups</a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                    href="https://thebullysupply.com/category/?search_sub_category=Studs">Studs</a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                    href="https://thebullysupply.com/category/?search_sub_category=Breeders">Breeders</a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                    href="https://thebullysupply.com/category/?search_sub_category=Breedings">Breedings</a>
-                                            </li>
-
-
-                                        </ul>
-                                    </nav>
+                                    <TopCtaMenu />
+                                    <li className="nav-item">
+                                        <DesktopMegaMenu />
+                                    </li>
                                 </div>
 
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center sell-right-sec">
