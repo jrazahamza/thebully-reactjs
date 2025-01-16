@@ -1,6 +1,18 @@
 import React, { useState } from "react";
+import { useFilter } from '../../Context/FilterContext';
 
-const CategoryMenu = ({ categories }) => {
+// const CategoryMenu = ({ categories }) => {
+const CategoryMenu = () => {
+
+  const { sidebarCategories, updateSelectedCategories } = useFilter();
+
+  const handleCheckboxChange = (event) => {
+    const { value, checked } = event.target;
+    updateSelectedCategories(value, checked);
+  };
+
+  console.log("Side Bar Context API", sidebarCategories);
+
   const [openCategory, setOpenCategory] = useState(null); // Tracks open main category
   const [openSubCategory, setOpenSubCategory] = useState(null); // Tracks open subcategory
 
@@ -15,17 +27,21 @@ const CategoryMenu = ({ categories }) => {
     setOpenSubCategory((prev) => (prev === subCategory ? null : subCategory));
   };
 
+  // const { selectedCategories, toggleFilterCategory } = useFilter();
+
+    // console.log(selectedCategories)
+
   return (
     <div className="category-menu">
       {/* Step 1: Main Categories */}
       <div className="filter-group filter-group-categories left-sidebar-cta-group parent-gro">
-        {categories.map((category) => (
+        {sidebarCategories.map((category) => (
           <div key={category.name} className="filter-content filter-group-content subsub-cta124 left-sidebar-child-group">
             {/* Main Category */}
             <div class="filter-title parent-cta left-sidebar-cta-label" onClick={() => toggleCategory(category)}
                 style={{ cursor: "pointer", padding: "8px", fontWeight: "bold" }}>
-            <span class="input-label">
-                <input type="checkbox" name="child_categories" value="1" />{category.name}
+            <span class="input-label" data-category={category.name}>
+                <input type="checkbox" name="child_categories" value={category.name} />{category.name}
             </span> 
             <i class="fa fa-chevron-down" aria-hidden="true"></i> 
             </div>            
@@ -38,8 +54,8 @@ const CategoryMenu = ({ categories }) => {
                     {/* Subcategory */}
                     <div class="filter-title parent-cta left-sidebar-cta-label" onClick={() => toggleSubCategory(subCategory)}
                         style={{ cursor: "pointer", padding: "5px", fontStyle: "italic" }} >
-                        <span class="input-label">
-                            <input type="checkbox" name="child_categories" value="33" />{subCategory.name}
+                        <span class="input-label" data-category={subCategory.name}>
+                            <input type="checkbox" name="child_categories" value={subCategory.name} />{subCategory.name}
                         </span> 
                         <i class="fa fa-chevron-down" aria-hidden="true"></i>
                     </div>
@@ -54,12 +70,16 @@ const CategoryMenu = ({ categories }) => {
                           paddingLeft: "10px",
                         }} >
                         {subCategory.sub_sub_categories.map((subSubCategory) => (
-                        //   <div key={subSubCategory.name} className="subsubcategory-item">
-                        //     {subSubCategory.name}
-                        //   </div>
                         <div class="filter-content filter-group-content subsub-cta124 left-sidebar-child-group" key={subSubCategory.name}>
-                            <input type="checkbox" name="categories" value="American Bulldog60" id="category-60" />
-                            <label for="category-60">{subSubCategory.name}</label><br />
+                        <input
+                            type="checkbox"
+                            name="categories"
+                            value={`${subSubCategory.name}${subSubCategory.id}`}
+                            onChange={handleCheckboxChange}
+                        />
+                        <label htmlFor={`category-${subSubCategory.id}`}>
+                            {subSubCategory.name}
+                        </label><br />
                         </div>
                         ))}
                       </div>

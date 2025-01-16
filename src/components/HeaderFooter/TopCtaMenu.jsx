@@ -3,8 +3,8 @@ import React from 'react'
 function TopCtaMenu() {
   return (
     <>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 cta-nav ruk-custom-top-nav">
+    <nav class="navbar nav justify-content-center">
+        <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="#">Bullies</a>
             </li>

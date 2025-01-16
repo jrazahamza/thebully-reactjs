@@ -42,7 +42,7 @@ function MobileHeader() {
                         <a class="nav-link" href="#">Studs</a>
                         <a class="nav-link" href="#">Breeders</a>
                         <a class="nav-link" href="#">Breedings</a>
-                    </nav>
+                    </nav>                    
                     <div className="sell">
                         <a className='nav-link' href="#">Sell</a>
                     </div>

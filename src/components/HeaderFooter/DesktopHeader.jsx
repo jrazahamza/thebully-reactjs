@@ -51,17 +51,17 @@ function Header() {
           showMenu(dropdownMenu);
   
           // Show first category's sub-menu and sub-sub-menu
-          const firstCategoryItem = dropdownMenu.querySelector(".category-item");
-          if (firstCategoryItem) {
-            const firstSubMenu = firstCategoryItem.querySelector(".sub-menu");
-            if (firstSubMenu) {
-              showMenu(firstSubMenu);
+        //   const firstCategoryItem = dropdownMenu.querySelector(".category-item");
+        //   if (firstCategoryItem) {
+        //     const firstSubMenu = firstCategoryItem.querySelector(".sub-menu");
+        //     if (firstSubMenu) {
+        //       showMenu(firstSubMenu);
   
-              firstSubMenu.querySelectorAll(".sub-sub-menu").forEach((subSubMenu) => {
-                showMenu(subSubMenu);
-              });
-            }
-          }
+        //       firstSubMenu.querySelectorAll(".sub-sub-menu").forEach((subSubMenu) => {
+        //         showMenu(subSubMenu);
+        //       });
+        //     }
+        //   }
         } else {
           hideMenu(dropdownMenu);
         }

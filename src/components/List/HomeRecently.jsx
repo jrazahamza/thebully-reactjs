@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import Bullies from '../Cards/Bullies'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import axiosUrl from '../../config/axiosUrl'
 
-function HomeBullies() {
+function HomeRecently() {
 
   const settings = {
     centerMode: true,
@@ -48,13 +49,13 @@ function HomeBullies() {
   };
 
 // State to hold categories data
-const [bullies, setBullies] = useState([]);    
+const [services, setServices] = useState([]);    
 // Fetch categories data when component mounts listingsBullies
 useEffect(() => {
    axiosUrl.get('/home')  // Laravel API endpoint for fetching categories
           .then((response) => {
            // console.log("RUK API ", response.data.listingsBullies);
-           setBullies(response.data.listingsBullies);
+           setServices(response.data.care_service);
            //    setLoading(false);
           })
           .catch((error) => {
@@ -70,25 +71,25 @@ useEffect(() => {
     <section class="ruk-dogs-list-sec">
         <div class="ruk-bully-container">
             <div class="dog-listing-heading remo-ex-space">
-                <h2 class="text-uppercase fw-bold">Take a Look at Some of Our Bullies </h2>
+                <h2 class="text-uppercase fw-bold">Recently added ?</h2>
                 <a href="#" class="text-dark text-decoration-none fw-semibold">See All</a>
             </div>
             <div class="g-4 ruk-dog-card-row row-firs-space">
             <Slider {...settings}>
               {
-              bullies.map((bully, index) => (
+              services.map((service, index) => (
               <div class="dog-list-col">    
                   <div class="dog-card">
                       <a href="#" class="box-link">
-                          <img src={`http://127.0.0.1:8000/${bully.gallery1}`} alt="American" class="img-fluid rounded" />
+                          <img src={`http://127.0.0.1:8000${service.gallery1}`} alt="American" class="img-fluid rounded" />
                           <span class="heart-icon">
                           </span></a><a class="favourite-button">
                           <i class="fa fa-heart-o" aria-hidden="true"></i>
                       </a>
                       <div class="dog-card-body">
-                          <h3 class="dog-title scape-line">{bully.title}</h3>
-                          <p class="dog-category scape-line">Category: {bully.categoryName}</p>
-                          <p class="dog-price">${bully.price}</p>
+                          <h3 class="dog-title scape-line">{service.title}</h3>
+                          <p class="dog-category scape-line">Category: {service.categoryName}</p>
+                          <p class="dog-price">${service.price}</p>
                       </div>
                   </div> 
               </div>
@@ -102,4 +103,4 @@ useEffect(() => {
   )
 }
 
-export default HomeBullies
+export default HomeRecently

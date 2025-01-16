@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FooterCard from '../Cards/FooterCard'
 import OurPartner from '../Cards/OurPartner'
+import axiosUrl from '../../config/axiosUrl'
 
 function Footer() {
+
+    
+// State to hold categories data
+const [footercta, setFootercta] = useState([]);    
+// Fetch categories data when component mounts listingsBullies
+useEffect(() => {
+   axiosUrl.get('/footer-categories')  // Laravel API endpoint for fetching categories
+          .then((response) => {
+           // console.log("RUK API ", response.data.listingsBullies);
+           setFootercta(response.data);
+           //    setLoading(false);
+           console.log(response.data);
+          })
+          .catch((error) => {
+              console.error("There was an error fetching the categories:", error);
+           //    setLoading(false);
+          });
+  }, []);
+
+  console.log("Footer Data Form API",footercta);
+
   return (
     <>
     {/* <!-- Footer Area--> */}
@@ -29,6 +51,14 @@ function Footer() {
               <div class="col-md-2 foo-cta-list-col">
                   <h3>Bully</h3>
                   <ul>
+                  {
+                    footercta.map((fooctalist, index) => (     
+                        fooctalist.subcategories.map((foosublist, index) => (     
+                        <li class="cta-footer-list"><a href="#">{foosublist.name}</a></li>
+                        ))
+                        ))
+                        }                       
+                      {/* <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
                       <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
                       <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
                       <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
@@ -50,9 +80,7 @@ function Footer() {
                       <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
                       <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
                       <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
-                      <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
-                      <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
-                      <li class="cta-footer-list"><a href="#">American Bulldog</a></li>
+                      <li class="cta-footer-list"><a href="#">American Bulldog</a></li> */}
                   </ul>
               </div>
               <div class="col-md-2 foo-cta-list-col">

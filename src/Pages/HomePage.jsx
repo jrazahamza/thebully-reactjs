@@ -10,6 +10,11 @@ import TopSpot from '../components/Banners/TopSpot'
 import Blog from '../components/Blog/Blog'
 import CareGive from '../components/Banners/CareGive'
 import MainHeader from '../components/HeaderFooter/MainHeader'
+import HomeBreeders from '../components/List/HomeBreeders'
+import HomeSupplies from '../components/List/HomeSupplies'
+import HomeServices from '../components/List/HomeServices'
+import HomeRecently from '../components/List/HomeRecently'
+import HomeSupplements from '../components/List/HomeSupplements'
 
 function HomePage() {
   return (
@@ -21,19 +26,22 @@ function HomePage() {
     {/* <!-- Category Section --> */}
     <ExploreCategories />
    {/* <!-- Dog Listings Section 1--> */}
-    <HomeBullies />    
+    <HomeBullies />
+    <HomeFeatured />
+    <HomeBreeders />
     {/* <!-- Shop Section--> */}
     <ShopBanner />
    {/* <!-- Dog Listings Section 1--> */}
-    <HomeFeatured />
+    <HomeRecently />
    {/* <!-- want top spot section --> */}
     <TopSpot />
    {/* <!-- Dog Listings Section 1--> */}
-   <HomeFeatured />
+   <HomeSupplies />
+   <HomeServices />
    {/* <!-- Home page banner 2 Section --> */}
     <CareGive />
    {/* <!-- Dog Listings Section 1--> */}
-   <HomeFeatured />
+   <HomeSupplements />
    {/* <!-- Blogs Section --> */}
     <Blog />
     <Footer />

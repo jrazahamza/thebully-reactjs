@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Bullies from '../Cards/Bullies'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import axiosUrl from '../../config/axiosUrl'
 
 function HomeFeatured() {
 
@@ -47,24 +48,57 @@ function HomeFeatured() {
     ],
   };
 
+// State to hold categories data
+const [featured, setFeatured] = useState([]);    
+// Fetch categories data when component mounts listingsBullies
+useEffect(() => {
+   axiosUrl.get('/home')  // Laravel API endpoint for fetching categories
+          .then((response) => {
+           // console.log("RUK API ", response.data.listingsBullies);
+           setFeatured(response.data.promotion_listings);
+           //    setLoading(false);
+          })
+          .catch((error) => {
+              console.error("There was an error fetching the categories:", error);
+           //    setLoading(false);
+          });
+  }, []);
+
+  // console.log("Bullies Form API",bullies);
+
   return (
     <>
     <section class="ruk-dogs-list-sec">
-          <div class="ruk-bully-container">
-              <div class="dog-listing-heading remo-ex-space">
-                  <h2 class="text-uppercase fw-bold">Take a look at some of our featured products </h2>
-                  <a href="#" class="text-dark text-decoration-none fw-semibold">See All</a>
+        <div class="ruk-bully-container">
+            <div class="dog-listing-heading remo-ex-space">
+                <h2 class="text-uppercase fw-bold">Take a look at some of our featured products </h2>
+                <a href="#" class="text-dark text-decoration-none fw-semibold">See All</a>
+            </div>
+            <div class="g-4 ruk-dog-card-row row-firs-space">
+            <Slider {...settings}>
+              {
+              featured.map((feature, index) => (
+              <div class="dog-list-col">    
+                  <div class="dog-card">
+                      <a href="#" class="box-link">
+                          <img src={`http://127.0.0.1:8000${feature.gallery1}`} alt="American" class="img-fluid rounded" />
+                          <span class="heart-icon">
+                          </span></a><a class="favourite-button">
+                          <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      </a>
+                      <div class="dog-card-body">
+                          <h3 class="dog-title scape-line">{feature.title}</h3>
+                          <p class="dog-category scape-line">Category: {feature.categoryName}</p>
+                          <p class="dog-price">${feature.price}</p>
+                      </div>
+                  </div> 
               </div>
-              <div class="g-4 ruk-dog-card-row row-firs-space">
-              <Slider {...settings}>
-                <Bullies />
-                <Bullies />
-                <Bullies />
-                <Bullies />        
-              </Slider>              
-              </div>
-          </div>
-      </section>         
+              ))
+              }                             
+            </Slider>
+            </div>
+        </div>
+    </section>      
     </>
   )
 }
